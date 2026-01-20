@@ -1,4 +1,4 @@
-import 'package:ag_crm_myadmin/views/home/home_screen.dart';
+import 'package:ag_crm_myadmin/views/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ag CRM MyAdmin',
-      home: HomeScreen(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
