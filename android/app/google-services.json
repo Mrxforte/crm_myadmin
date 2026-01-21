@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "417950284520",
+    "project_id": "ag-crm-b1840",
+    "storage_bucket": "ag-crm-b1840.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417950284520:android:6dba414ce988503bf3e75d",
+        "android_client_info": {
+          "package_name": "com.example.ag_crm_myadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMpTqTF-ZJJkyuyhzX41OE1uXxO5uJVD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
