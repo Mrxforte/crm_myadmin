@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HListOfProjectsWidget extends StatelessWidget {
-  const HListOfProjectsWidget({super.key});
+class HListOfWorkersWidget extends StatelessWidget {
+  const HListOfWorkersWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

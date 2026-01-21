@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Ag CRM MyAdmin',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB(255, 243, 243, 243),
+        iconTheme: const IconThemeData(color: Colors.green),
       ),
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,
