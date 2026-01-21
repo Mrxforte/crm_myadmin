@@ -44,6 +44,7 @@ class _ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
       color: Colors.white,
       child: SizedBox(
         width: 250,

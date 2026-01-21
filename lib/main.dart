@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ag CRM MyAdmin',
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 243, 243, 243),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 250, 248, 248),
         iconTheme: const IconThemeData(color: Colors.green),
       ),
       home: SplashScreen(),
