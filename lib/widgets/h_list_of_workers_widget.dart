@@ -9,12 +9,13 @@ class HListOfWorkersWidget extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.3,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 32),
+
+        padding: const EdgeInsets.only(left: 32),
         itemCount: 5,
         separatorBuilder: (context, index) => const SizedBox(width: 16),
         itemBuilder: (context, index) {
           return _ProjectCard(
-            imagePath: "assets/images/image.png",
+            imagePath: "assets/images/worker.jpg",
             location: "Tver",
             workersCount: 20,
             budget: "1000t",
@@ -43,67 +44,73 @@ class _ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 250,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Image Container
-          Container(
-            height: 150,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(imagePath),
-                fit: BoxFit.cover,
+    return Card(
+      color: Colors.white,
+      child: SizedBox(
+        width: 250,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Image Container
+            Container(
+              height: 200,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(imagePath),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(12),
               ),
-              borderRadius: BorderRadius.circular(12),
             ),
-          ),
-          const SizedBox(height: 12),
+            const SizedBox(height: 12),
 
-          // Location and Workers Info
-          Row(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            // Location and Workers Info
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Row(
                 children: [
-                  _InfoRow(
-                    icon: Icons.location_on_outlined,
-                    text: location,
-                    spacing: 8,
-                  ),
-                  const SizedBox(height: 8),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _InfoRow(
+                        icon: Icons.location_on_outlined,
+                        text: location,
+                        spacing: 8,
+                      ),
+                      const SizedBox(height: 8),
 
-                  _InfoRow(
-                    icon: Icons.person_outline,
-                    text: "$workersCount workers",
-                    spacing: 8,
+                      _InfoRow(
+                        icon: Icons.person_outline,
+                        text: "$workersCount workers",
+                        spacing: 8,
+                      ),
+                      const SizedBox(height: 8),
+                    ],
                   ),
-                  const SizedBox(height: 8),
+                  const Spacer(),
+                  // Budget and Tools Info
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      _InfoRow(
+                        icon: Icons.monetization_on_outlined,
+                        text: budget,
+                        spacing: 4,
+                      ),
+                      _InfoRow(
+                        icon: Icons.build_outlined,
+                        text: "$toolsCount tools",
+                        spacing: 4,
+                      ),
+                    ],
+                  ),
                 ],
               ),
-              const Spacer(),
-              // Budget and Tools Info
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _InfoRow(
-                    icon: Icons.monetization_on_outlined,
-                    text: budget,
-                    spacing: 4,
-                  ),
-                  _InfoRow(
-                    icon: Icons.build_outlined,
-                    text: "$toolsCount tools",
-                    spacing: 4,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

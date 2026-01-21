@@ -34,7 +34,7 @@ class CustomTopAppBarWidget extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               image: DecorationImage(
-                image: AssetImage("assets/images/image.png"),
+                image: AssetImage("assets/images/image1.png"),
                 fit: BoxFit.cover,
               ),
             ),

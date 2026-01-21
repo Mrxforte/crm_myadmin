@@ -43,6 +43,20 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      // Bottom Navigation Bar
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.build), label: "Tools"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.control_point),
+            label: "Dahsboard",
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Workers"),
+          BottomNavigationBarItem(icon: Icon(Icons.money), label: "finance"),
+        ],
+      ),
     );
   }
 }
