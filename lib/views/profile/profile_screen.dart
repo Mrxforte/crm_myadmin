@@ -50,7 +50,7 @@ class ProfileScreen extends StatelessWidget {
                   // user info card
                   SizedBox(height: 24),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 24),
+                    margin: EdgeInsets.symmetric(horizontal: 32),
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -65,50 +65,37 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Phone",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                SizedBox(height: 8),
-                                Text(
-                                  "+1 234 567 890",
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Location",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                SizedBox(height: 8),
-                                Text(
-                                  "New York, USA",
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                        // make these widgets reusable with
+                        UserInfoTextWidget(
+                          userFieldTitle: "Full Name",
+                          userInfoField: "Vadim",
+                        ),
+                        SizedBox(height: 16),
+                        UserInfoTextWidget(
+                          userFieldTitle: "Phone",
+                          userInfoField: "+1 234 567 8901",
+                        ),
+                        SizedBox(height: 16),
+                        UserInfoTextWidget(
+                          userFieldTitle: "Email",
+                          userInfoField: "vadim@example.com",
+                        ),
+                        SizedBox(height: 16),
+                        UserInfoTextWidget(
+                          userFieldTitle: "Location",
+                          userInfoField: "New York, USA",
+                        ),
+                        // talant
+                        SizedBox(height: 16),
+                        UserInfoTextWidget(
+                          userFieldTitle: "Talant",
+                          userInfoField: "UI/UX Designer",
+                        ),
+                        // department
+                        SizedBox(height: 16),
+                        UserInfoTextWidget(
+                          userFieldTitle: "Department",
+                          userInfoField: "Design",
                         ),
                       ],
                     ),
@@ -140,6 +127,29 @@ class ProfileScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class UserInfoTextWidget extends StatelessWidget {
+  const UserInfoTextWidget({
+    super.key,
+    required this.userFieldTitle,
+    required this.userInfoField,
+  });
+  final String userFieldTitle;
+  final String userInfoField;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          userFieldTitle,
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        ),
+        Text(userInfoField, style: TextStyle(fontSize: 16)),
+      ],
     );
   }
 }
