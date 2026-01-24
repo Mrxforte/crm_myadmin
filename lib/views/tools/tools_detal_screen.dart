@@ -7,7 +7,9 @@ class ToolsDetalScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Tool Details')),
-      body: const Placeholder(),
+      body: Container(
+        child: SingleChildScrollView(child: Column(children: [])),
+      ),
     );
   }
 }

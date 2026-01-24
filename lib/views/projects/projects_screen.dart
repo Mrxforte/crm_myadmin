@@ -1,3 +1,4 @@
+import 'package:ag_crm_myadmin/views/projects/add_project_screen.dart';
 import 'package:ag_crm_myadmin/views/projects/project_details_screen.dart';
 import 'package:ag_crm_myadmin/widgets/project_card_widget.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,19 @@ class ProjectsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) {
+                return const AddProjectScreen();
+              },
+            ),
+          );
+        },
+        shape: CircleBorder(),
+        child: const Icon(Icons.add),
+      ),
       appBar: AppBar(title: const Text('Projects')),
       body: Container(
         margin: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),

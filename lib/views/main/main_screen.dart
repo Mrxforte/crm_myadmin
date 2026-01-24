@@ -1,6 +1,6 @@
 import 'package:ag_crm_myadmin/views/dashboard/dashboard_screen.dart';
-import 'package:ag_crm_myadmin/views/finance/finance_screen.dart';
 import 'package:ag_crm_myadmin/views/home/home_screen.dart';
+import 'package:ag_crm_myadmin/views/projects/projects_screen.dart';
 import 'package:ag_crm_myadmin/views/tools/tools_screen.dart';
 import 'package:ag_crm_myadmin/views/workers/workers_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +15,7 @@ class MainScreen extends StatefulWidget {
     ToolsScreen(),
     DashboardScreen(),
     WorkersScreen(),
-    FinanceScreen(),
+    ProjectsScreen(),
   ];
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -37,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
             label: "Dahsboard",
           ),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Workers"),
-          BottomNavigationBarItem(icon: Icon(Icons.money), label: "finance"),
+          BottomNavigationBarItem(icon: Icon(Icons.folder), label: "projects"),
         ],
         currentIndex: widget.currentIndex,
         onTap: (value) {
