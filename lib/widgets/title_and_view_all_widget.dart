@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 class TitleAndViewAllWidget extends StatelessWidget {
   final String title;
+  final VoidCallback? onTapHandler;
 
-  const TitleAndViewAllWidget({super.key, required this.title});
+  const TitleAndViewAllWidget({
+    super.key,
+    required this.title,
+    this.onTapHandler,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,7 @@ class TitleAndViewAllWidget extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: onTapHandler,
             child: Text(
               "View All",
               style: TextStyle(

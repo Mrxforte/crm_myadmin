@@ -1,3 +1,4 @@
+import 'package:ag_crm_myadmin/views/projects/projects_screen.dart';
 import 'package:ag_crm_myadmin/widgets/custom_searchbar_widget.dart';
 import 'package:ag_crm_myadmin/widgets/custom_top_appbar_widget.dart';
 import 'package:ag_crm_myadmin/widgets/h_list_of_projects_widget.dart';
@@ -29,7 +30,16 @@ class _HomeScreenState extends State<HomeScreen> {
               // Custom serach bar
               CustomSearchbarWidget(),
               // Title and view all row
-              TitleAndViewAllWidget(title: "Projects"),
+              TitleAndViewAllWidget(
+                title: "Projects",
+                onTapHandler: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const ProjectsScreen(),
+                    ),
+                  );
+                },
+              ),
               // List Of Projects
               HListOfProjectsWidget(),
               // Title and view all row
