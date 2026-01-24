@@ -6,6 +6,7 @@ import 'package:ag_crm_myadmin/widgets/h_list_of_workers_widget.dart';
 import 'package:ag_crm_myadmin/widgets/title_and_view_all_widget.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {
   static const String route = "/";
   const HomeScreen({super.key});
@@ -42,20 +43,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-      ),
-      // Bottom Navigation Bar
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.build), label: "Tools"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.control_point),
-            label: "Dahsboard",
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Workers"),
-          BottomNavigationBarItem(icon: Icon(Icons.money), label: "finance"),
-        ],
       ),
     );
   }

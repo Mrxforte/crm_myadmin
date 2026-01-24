@@ -1,4 +1,4 @@
-import 'package:ag_crm_myadmin/views/home/home_screen.dart';
+import 'package:ag_crm_myadmin/views/main/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,10 +13,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(milliseconds: 4000), () {
-      Navigator.of(context).push(
+      Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) {
-            return HomeScreen();
+            return MainScreen();
           },
         ),
       );

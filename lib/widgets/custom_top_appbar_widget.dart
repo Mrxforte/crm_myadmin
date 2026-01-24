@@ -1,3 +1,4 @@
+import 'package:ag_crm_myadmin/views/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomTopAppBarWidget extends StatelessWidget {
@@ -28,14 +29,25 @@ class CustomTopAppBarWidget extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            width: 70,
-            height: 70,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              image: DecorationImage(
-                image: AssetImage("assets/images/image1.png"),
-                fit: BoxFit.cover,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ProfileScreen();
+                  },
+                ),
+              );
+            },
+            child: Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                image: DecorationImage(
+                  image: AssetImage("assets/images/image1.png"),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
