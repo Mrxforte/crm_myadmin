@@ -1,4 +1,6 @@
 import 'package:ag_crm_myadmin/views/projects/projects_screen.dart';
+import 'package:ag_crm_myadmin/views/tools/tools_screen.dart';
+import 'package:ag_crm_myadmin/views/workers/workers_screen.dart';
 import 'package:ag_crm_myadmin/widgets/custom_searchbar_widget.dart';
 import 'package:ag_crm_myadmin/widgets/custom_top_appbar_widget.dart';
 import 'package:ag_crm_myadmin/widgets/h_list_of_projects_widget.dart';
@@ -43,11 +45,29 @@ class _HomeScreenState extends State<HomeScreen> {
               // List Of Projects
               HListOfProjectsWidget(),
               // Title and view all row
-              TitleAndViewAllWidget(title: "Wokrers"),
+              TitleAndViewAllWidget(
+                title: "Wokrers",
+                onTapHandler: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const WorkersScreen(),
+                    ),
+                  );
+                },
+              ),
               // List Of Workers
               HListOfWorkersWidget(),
               // Title and view all row
-              TitleAndViewAllWidget(title: "Tools"),
+              TitleAndViewAllWidget(
+                title: "Tools",
+                onTapHandler: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const ToolsScreen(),
+                    ),
+                  );
+                },
+              ),
               // List of Tools
               HListOfToolsWidget(),
             ],

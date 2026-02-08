@@ -1,4 +1,5 @@
-import 'package:ag_crm_myadmin/views/main/main_screen.dart';
+import 'package:ag_crm_myadmin/views/login/login_screen.dart';
+import 'package:ag_crm_myadmin/views/onboarding/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) {
-            return MainScreen();
+            return OnboardingScreen();
           },
         ),
       );

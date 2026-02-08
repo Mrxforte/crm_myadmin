@@ -1,3 +1,5 @@
+import 'package:ag_crm_myadmin/views/main/main_screen.dart';
+import 'package:ag_crm_myadmin/views/register/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -52,12 +54,34 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 10),
-                    ElevatedButton(onPressed: () {}, child: Text("Login")),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Registerscreen();
+                            },
+                          ),
+                        );
+                      },
+                      child: Text("Login"),
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Don't have an account?"),
-                        TextButton(onPressed: () {}, child: Text("Sign Up")),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return MainScreen();
+                                },
+                              ),
+                            );
+                          },
+                          child: Text("Sign Up"),
+                        ),
                       ],
                     ),
                   ],
